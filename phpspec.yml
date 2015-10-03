@@ -1,5 +1,5 @@
 suites:
     main:
-        namespace: App
-        psr4_prefix: App
+        namespace: ShirtBase
+        psr4_prefix: ShirtBase
         src_path: app
