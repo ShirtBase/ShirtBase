@@ -29,6 +29,7 @@
     },
     "scripts": {
         "post-install-cmd": [
+            "php artisan config:cache",
             "php artisan clear-compiled",
             "php artisan optimize"
         ],
