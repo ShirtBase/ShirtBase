@@ -4,6 +4,19 @@
     "keywords": ["shirt", "database", "API"],
     "license": "MIT",
     "type": "project",
+    "authors": [
+        {
+            "name": "Marcin Lawniczak",
+            "email": "marcin@lawniczak.me",
+            "homepage": "http://lawniczak.me",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "marcin@lawniczak.me",
+        "issues": "https://github.com/marcinlawnik/ShirtBase/issues",
+        "source": "https://github.com/marcinlawnik/ShirtBase"
+    },
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*"
