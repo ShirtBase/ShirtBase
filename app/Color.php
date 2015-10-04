@@ -4,14 +4,14 @@ namespace ShirtBase;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Shirt extends Model
+class Color extends Model
 {
     /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'shirts';
+    protected $table = 'colors';
 
     /**
      * The attributes that are mass assignable.
