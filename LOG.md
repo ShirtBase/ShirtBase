@@ -21,3 +21,7 @@ composer require barryvdh/laravel-ide-helper --dev
 Add in AppServiceProvider only for local environment Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 Commit what not already commited
 Integrate laravel-ide-helper into composer update process.
+Add model helper to development workflow
+Add seed data for colors
+Create Shirt and Color models and their respective migrations.
+Update README with color data attribution
