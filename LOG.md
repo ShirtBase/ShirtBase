@@ -20,3 +20,4 @@ php artisan make:model Shirt -m
 composer require barryvdh/laravel-ide-helper --dev
 Add in AppServiceProvider only for local environment Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 Commit what not already commited
+Integrate laravel-ide-helper into composer update process.
