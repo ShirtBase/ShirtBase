@@ -25,3 +25,9 @@ Add model helper to development workflow
 Add seed data for colors
 Create Shirt and Color models and their respective migrations.
 Update README with color data attribution
+Update models and migrations with fillable fields and constraints
+
+TAKEAWAY NOTE:
+php artisan migrate:refresh --seed
+
+Add color seeder
