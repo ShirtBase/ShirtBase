@@ -3,6 +3,7 @@
 namespace ShirtBase;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Shirt extends Model
 {
@@ -12,6 +13,11 @@ class Shirt extends Model
      */
     use SoftDeletes;
 
+    /**
+     * The attributes that should be mutated to dates.
+     *
+     * @var array
+     */
     protected $dates = ['deleted_at'];
 
     /**
@@ -43,5 +49,5 @@ class Shirt extends Model
      *
      * @var array
      */
-    protected $hidden = [];
+    protected $hidden = ['deleted_at'];
 }

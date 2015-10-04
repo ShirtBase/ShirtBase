@@ -3,6 +3,7 @@
 namespace ShirtBase;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Color extends Model
 {
@@ -12,6 +13,11 @@ class Color extends Model
      */
     use SoftDeletes;
 
+    /**
+     * The attributes that should be mutated to dates.
+     *
+     * @var array
+     */
     protected $dates = ['deleted_at'];
     /**
      * The database table used by the model.
@@ -25,12 +31,12 @@ class Color extends Model
      *
      * @var array
      */
-    protected $fillable = ['name', 'hex_code'];
+    protected $fillable = ['name', 'hexCode'];
 
     /**
      * The attributes excluded from the model's JSON form.
      *
      * @var array
      */
-    protected $hidden = ['created_at', 'updated_at'];
+    protected $hidden = ['created_at', 'updated_at', 'deleted_at'];
 }

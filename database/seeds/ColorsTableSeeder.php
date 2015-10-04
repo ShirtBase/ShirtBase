@@ -21,7 +21,7 @@ class ColorsTableSeeder extends Seeder
         foreach ($colorsArray as $name => $hexCode) {
             \ShirtBase\Color::create([
                 'name' => $name,
-                'hex_code' => $hexCode
+                'hexCode' => $hexCode
             ]);
         }
 
