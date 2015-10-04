@@ -18,7 +18,17 @@ class Shirt extends Model
      *
      * @var array
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'name',
+        'user_id',
+        'size',
+        'photo',
+        'color_id',
+        'comfortability',
+        'wear',
+        'sleeve_length',
+        'notes'
+    ];
 
     /**
      * The attributes excluded from the model's JSON form.

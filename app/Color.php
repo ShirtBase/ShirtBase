@@ -18,7 +18,7 @@ class Color extends Model
      *
      * @var array
      */
-    protected $fillable = [];
+    protected $fillable = ['name', 'hex_code'];
 
     /**
      * The attributes excluded from the model's JSON form.

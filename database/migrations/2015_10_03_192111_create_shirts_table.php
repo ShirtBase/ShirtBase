@@ -14,11 +14,11 @@ class CreateShirtsTable extends Migration
     {
         Schema::create('shirts', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('name')->unique();
             // Owner of shirt
             $table->integer('user_id');
             $table->string('size');
-            $table->string('photo');
+            $table->string('photo')->nullable();
             // Color model
             $table->integer('color_id');
             // Scale 1-10
