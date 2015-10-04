@@ -31,3 +31,8 @@ TAKEAWAY NOTE:
 php artisan migrate:refresh --seed
 
 Add color seeder
+Add support for soft deletes
+Start documenting API structure
+Disable CSRF for API
+Write API for Colors as per structure
+Write tests for Colors API
