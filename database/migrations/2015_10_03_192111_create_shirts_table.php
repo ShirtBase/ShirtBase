@@ -29,6 +29,7 @@ class CreateShirtsTable extends Migration
             // Miscellaneous notes
             $table->string('notes');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

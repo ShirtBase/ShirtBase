@@ -6,6 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Color extends Model
 {
+
+    /**
+     * Support for soft deletes
+     */
+    use SoftDeletes;
+
+    protected $dates = ['deleted_at'];
     /**
      * The database table used by the model.
      *
@@ -25,5 +32,5 @@ class Color extends Model
      *
      * @var array
      */
-    protected $hidden = [];
+    protected $hidden = ['created_at', 'updated_at'];
 }

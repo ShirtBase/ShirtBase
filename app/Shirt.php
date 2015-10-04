@@ -6,6 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Shirt extends Model
 {
+
+    /**
+     * Support for soft deletes
+     */
+    use SoftDeletes;
+
+    protected $dates = ['deleted_at'];
+
     /**
      * The database table used by the model.
      *
