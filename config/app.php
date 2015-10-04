@@ -145,6 +145,10 @@ return [
         ShirtBase\Providers\EventServiceProvider::class,
         ShirtBase\Providers\RouteServiceProvider::class,
 
+        /*
+         * Additional Service Providers...
+         */
+
     ],
 
     /*
