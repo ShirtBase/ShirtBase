@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Request;
 use ShirtBase\Color;
+use ShirtBase\Shirt;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -19,9 +20,11 @@ Route::get('/', function () {
 
 Route::group(['prefix' => '/api'], function() {
     Route::group(['prefix' => 'shirts'], function() {
-       Route::get('/', function() {
-           return 'Works!';
-       });
+        //Get a list of all shirts
+        Route::get('/', function() {
+            $shirts = Shirt::all();
+            return Response::json($shirts, 200, [], JSON_PRETTY_PRINT);
+        });
     });
 
     Route::group(['prefix' => 'colors'], function() {
