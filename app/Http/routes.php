@@ -25,6 +25,44 @@ Route::group(['prefix' => '/api'], function() {
             $shirts = Shirt::all();
             return Response::json($shirts, 200, [], JSON_PRETTY_PRINT);
         });
+
+        //Get a shirt with specific ID
+        Route::get('/{id}', function($id) {
+            $shirt = Shirt::whereId($id);
+            if ($shirt->exists()) {
+                $responseJson = $shirt->get();
+                $statusCode  = 200;
+            } else {
+                $responseJson = [
+                    'message' => 'Nie ma koszulki o podanym ID.'
+                ];
+                $statusCode = 400;
+            }
+            // Return response
+            return Response::json($responseJson, $statusCode, [], JSON_PRETTY_PRINT);
+        });
+
+        //Delete a shirt with specific ID
+
+        Route::delete('/{id}', function($id) {
+            $shirt = Shirt::whereId($id);
+            if ($shirt->exists()) {
+                $shirt->delete();
+                $responseJson = [
+                    'message' => 'Usunięto koszulkę.'
+                ];
+                $statusCode  = 200;
+            } else {
+                $responseJson = [
+                    'message' => 'Nie ma koszulki o podanym ID.'
+                ];
+                $statusCode = 400;
+            }
+            // Return response
+            return Response::json($responseJson, $statusCode, [], JSON_PRETTY_PRINT);
+        });
+
+
     });
 
     Route::group(['prefix' => 'colors'], function() {
