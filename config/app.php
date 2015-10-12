@@ -148,6 +148,7 @@ return [
         /*
          * Additional Service Providers...
          */
+        'Barryvdh\Cors\ServiceProvider'
 
     ],
 
