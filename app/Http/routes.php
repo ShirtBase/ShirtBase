@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix' => '/api'], function() {
+Route::group(['prefix' => '/api', 'middleware' => 'cors'], function() {
     Route::group(['prefix' => 'shirts'], function() {
         //Get a list of all shirts
         Route::get('/', function() {
