@@ -1,5 +1,5 @@
 !.gitignore
-!TShirt1.jpg
-!TShirt2.jpg
+!../../../docs/images/TShirt1.jpg
+!../../../docs/images/TShirt2.jpg
 !TShirt3.jpg
-!TShirt4.jpg
+!../../../docs/images/TShirt4.jpg

@@ -20,8 +20,8 @@ class ShirtsTableSeeder extends Seeder
                 'size' => $faker->randomElement(['XS', 'S', 'M', 'L', 'XL', 'XXL']),
                 'photo' => 'sample/TShirt'.rand(1,4).'.jpg',
                 'color_id' => rand(1,140),
-                'comfortability' => rand(1,10),
-                'wear' => rand(1,10),
+                'comfortability' => rand(1,5),
+                'wear' => rand(1,5),
                 'sleeve_length' => rand(5,100),
                 'notes' => $faker->paragraph
             ]);

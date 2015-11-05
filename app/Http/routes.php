@@ -18,6 +18,28 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Images route
+
+Route::get('images/sample/{image}', function($image = null)
+{
+
+    $path = storage_path().'/images/sample/' . $image;
+    if (file_exists($path)) {
+        return Response::download($path);
+    }
+
+});
+
+Route::get('images/{image}', function($image = null)
+{
+
+    $path = storage_path().'/images/' . $image;
+    if (file_exists($path)) {
+        return Response::download($path);
+    }
+
+});
+
 Route::group(['prefix' => '/api', 'middleware' => 'cors'], function() {
     Route::group(['prefix' => 'shirts'], function() {
         //Get a list of all shirts
