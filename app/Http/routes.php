@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Request;
 use ShirtBase\Color;
 use ShirtBase\Shirt;
+
+use SoapBox\Formatter\Formatter;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -44,8 +46,11 @@ Route::group(['prefix' => '/api', 'middleware' => 'cors'], function() {
     Route::group(['prefix' => 'shirts'], function() {
         //Get a list of all shirts
         Route::get('/', function() {
-            $shirts = Shirt::all();
+            $shirts = Shirt::all()->toArray();
             return Response::json($shirts, 200, [], JSON_PRETTY_PRINT);
+            //XML example
+            //$formatter = Formatter::make($shirts, Formatter::ARR);
+            //return Response::make($formatter->toXml(), '200')->header('Content-Type', 'text/xml');
         });
 
         //Add a shirt
